@@ -428,8 +428,15 @@
 </li>
 <li><p><a class="reference external" href="#bck_light">9. Background Lightcurve</a></p></li>
 </ul>
-</div>
 <hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="initialisation-a-class-anchor-id-initialisation-a">
 <h2><span class="section-number">1.2. </span>1. Initialisation<a class="anchor" id="initialisation"></a><a class="headerlink" href="#initialisation-a-class-anchor-id-initialisation-a" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="heasoft-a-class-anchor-id-heasoft-a">
@@ -532,7 +539,17 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<img src="Figures/MCG-6-30-15_Source_Image.png"/><p>The scale was set to <strong>log</strong> and the colour to <strong>heat</strong>.</p>
+<img src="Figures/MCG-6-30-15_Source_Image.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_Source_Image.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_26_0.png" src="_images/PN data_26_0.png" />
+</div>
+</div>
+<p>The scale was set to <strong>log</strong> and the colour to <strong>heat</strong>.</p>
 </div>
 <div class="section" id="filtering-the-data-a-class-anchor-id-filter-a">
 <h2><span class="section-number">1.5. </span>4 Filtering the Data <a class="anchor" id="Filter"></a><a class="headerlink" href="#filtering-the-data-a-class-anchor-id-filter-a" title="Permalink to this headline">¶</a></h2>
@@ -563,7 +580,17 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<img src="Figures/MCG-6-30-15_filtered_light_curve.png"/><p>There is a clear cutoff of data at the right side of the graph indicating that there was a flaring event that was filtered out. For brevity, a lightcurve using the unfiltered data will be created.</p>
+<img src="Figures/MCG-6-30-15_filtered_light_curve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_filtered_light_curve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_35_0.png" src="_images/PN data_35_0.png" />
+</div>
+</div>
+<p>There is a clear cutoff of data at the right side of the graph indicating that there was a flaring event that was filtered out. For brevity, a lightcurve using the unfiltered data will be created.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">lightcurve_un</span><span class="o">-</span><span class="n">filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
@@ -578,7 +605,17 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<img src="Figures/MCG-6-30-15_un-filtered_light_curve.png"/><p>There is clearly a strong flaring event that should be removed. The standard filtering also removed various other counts from the un-filtered data that can be seen by comparing the two graphs. It is clear that the filtered data set should be used from here on.</p>
+<img src="Figures/MCG-6-30-15_un-filtered_light_curve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_un-filtered_light_curve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_40_0.png" src="_images/PN data_40_0.png" />
+</div>
+</div>
+<p>There is clearly a strong flaring event that should be removed. The standard filtering also removed various other counts from the un-filtered data that can be seen by comparing the two graphs. It is clear that the filtered data set should be used from here on.</p>
 </div>
 <div class="section" id="deep-minimum-lightcurve-a-class-anchor-id-source-a">
 <h3><span class="section-number">1.5.3. </span>4.3 Deep Minimum Lightcurve <a class="anchor" id="source"></a><a class="headerlink" href="#deep-minimum-lightcurve-a-class-anchor-id-source-a" title="Permalink to this headline">¶</a></h3>
@@ -604,13 +641,53 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<img src="Figures/MCG-6-30-15_deepmin_light_curve.png"/></div>
+<img src="Figures/MCG-6-30-15_deepmin_light_curve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_deepmin_light_curve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_47_0.png" src="_images/PN data_47_0.png" />
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="source-detection-a-class-anchor-id-source-a">
 <h2><span class="section-number">1.6. </span>5. Source Detection <a class="anchor" id="source"></a><a class="headerlink" href="#source-detection-a-class-anchor-id-source-a" title="Permalink to this headline">¶</a></h2>
 <p>The image of the source was viewed again to determine where the source and background regions are. To do this it was viewed with ds9 and circles under the region tab were added to the image and altered in size until they matched these regions. The properties such as position and radius of these circles were set to physical units and recorded by using the regions “get information” option.</p>
-<img src="Figures/MCG-6-30-15_image_with_regions.png"/><img src="Figures/Background%20circle.png"/>
-<img src="Figures/Source%20circle.png"/><p>The spectrum of the source and background regions was then determined using <code class="docutils literal notranslate"><span class="pre">spectrumset</span></code></p>
+<img src="Figures/MCG-6-30-15_image_with_regions.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_image_with_regions.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_51_0.png" src="_images/PN data_51_0.png" />
+</div>
+</div>
+<img src="Figures/Background%20circle.png"/>
+<img src="Figures/Source%20circle.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/Background circle.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_53_0.png" src="_images/PN data_53_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/Source circle.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_54_0.png" src="_images/PN data_54_0.png" />
+</div>
+</div>
+<p>The spectrum of the source and background regions was then determined using <code class="docutils literal notranslate"><span class="pre">spectrumset</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNsource_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span>
@@ -651,7 +728,17 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<img src="Figures/MCG-6-30-15_Pileup.png"/></div>
+<img src="Figures/MCG-6-30-15_Pileup.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_Pileup.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_64_0.png" src="_images/PN data_64_0.png" />
+</div>
+</div>
+</div>
 <div class="section" id="preparing-the-spectrum-a-class-anchor-id-specprepare-a">
 <h2><span class="section-number">1.8. </span>7. Preparing the Spectrum <a class="anchor" id="specprepare"></a><a class="headerlink" href="#preparing-the-spectrum-a-class-anchor-id-specprepare-a" title="Permalink to this headline">¶</a></h2>
 <p>The calibration files, arf and rmf were created and grouped together to make using xspec easier</p>
@@ -716,7 +803,17 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<img src="Figures/MCG-60-30-15_RAW_DATA.png"/><p>This is the filtered data from MCG-60-30-15. There seems to be a break in the data at around 2.2keV which is due to the gold coating on the mirrors creating an absorption edge. The arf and rmf should take this into account when fitting models to this data, however, the data below this will be ignored as it is not important to what we want to observe.</p>
+<img src="Figures/MCG-60-30-15_RAW_DATA.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-60-30-15_RAW_DATA.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_78_0.png" src="_images/PN data_78_0.png" />
+</div>
+</div>
+<p>This is the filtered data from MCG-60-30-15. There seems to be a break in the data at around 2.2keV which is due to the gold coating on the mirrors creating an absorption edge. The arf and rmf should take this into account when fitting models to this data, however, the data below this will be ignored as it is not important to what we want to observe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">2.5</span>
@@ -731,7 +828,17 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<img src="Figures/MCG-60-30-15_Restricted_data.png"/><p>This presents a much clearer view of the data and a slight hump at ~6keV can be seen. A simple power law model can now be fitted to the data to try and extract some information about the small hump.</p>
+<img src="Figures/MCG-60-30-15_Restricted_data.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-60-30-15_Restricted_data.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_83_0.png" src="_images/PN data_83_0.png" />
+</div>
+</div>
+<p>This presents a much clearer view of the data and a slight hump at ~6keV can be seen. A simple power law model can now be fitted to the data to try and extract some information about the small hump.</p>
 <div class="section" id="fitting-a-model-a-class-anchor-id-model-a">
 <h3><span class="section-number">1.9.1. </span>Fitting a model <a class="anchor" id="model"></a><a class="headerlink" href="#fitting-a-model-a-class-anchor-id-model-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
@@ -769,7 +876,17 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<img src="Figures/MCG-60-30-15_q=3_Powerlaw.png"/><p>Here the iron emission line at 6.4keV can clearly be seen and is very strongly broadened to energies around ~5keV.</p>
+<img src="Figures/MCG-60-30-15_q=3_Powerlaw.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-60-30-15_q=3_Powerlaw.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_92_0.png" src="_images/PN data_92_0.png" />
+</div>
+</div>
+<p>Here the iron emission line at 6.4keV can clearly be seen and is very strongly broadened to energies around ~5keV.</p>
 </div>
 <div class="section" id="creating-the-unfolded-spectrum-a-class-anchor-id-unfolded-a">
 <h3><span class="section-number">1.9.2. </span>Creating the Unfolded Spectrum<a class="anchor" id="unfolded"></a><a class="headerlink" href="#creating-the-unfolded-spectrum-a-class-anchor-id-unfolded-a" title="Permalink to this headline">¶</a></h3>
@@ -811,6 +928,16 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 <img src="Figures/MCG-6-30-15_iron-line-removed.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_iron-line-removed.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_102_0.png" src="_images/PN data_102_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">model</span> <span class="n">powerlaw</span>
 </pre></div>
@@ -854,12 +981,32 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 <img src="Figures/MCG-6-30-15_fitted_model_iron_removed.png"/><div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_fitted_model_iron_removed.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_110_0.png" src="_images/PN data_110_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">eeufs</span>
 </pre></div>
 </div>
 </div>
 </div>
-<img src="Figures/MCG-6-30-15_unfolded_spec_v1.png"/><p>The iron line can clearly be seen, however removing the continuum fit and rescaling the y axis needs to be done</p>
+<img src="Figures/MCG-6-30-15_unfolded_spec_v1.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_unfolded_spec_v1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_113_0.png" src="_images/PN data_113_0.png" />
+</div>
+</div>
+<p>The iron line can clearly be seen, however removing the continuum fit and rescaling the y axis needs to be done</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">iplot</span>
@@ -883,6 +1030,16 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 <img src="Figures/MCG-6-30-15_unfolded_spec_v2.png"/><div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/MCG-6-30-15_unfolded_spec_v2.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_119_0.png" src="_images/PN data_119_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLT</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -902,7 +1059,27 @@ This can be solved by issuing the command <code class="docutils literal notransl
 <h1><span class="section-number">2. </span>9. Background lightcurve <a class="anchor" id="bck_light"></a><a class="headerlink" href="#background-lightcurve-a-class-anchor-id-bck-light-a" title="Permalink to this headline">¶</a></h1>
 <p>A lightcurve is made to determine the prescence of any flaring events. A background region needs to be selected and a lightcurve plotted</p>
 <p>The image file was brought up with ds9 and a background region selected</p>
-<img src="Figures/background%20circle%20lightcurve.png"/><img src="Figures/background%20circle%20detail.png"/>
+<img src="Figures/background%20circle%20lightcurve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background circle lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_126_0.png" src="_images/PN data_126_0.png" />
+</div>
+</div>
+<img src="Figures/background%20circle%20detail.png"/>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background circle detail.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_128_0.png" src="_images/PN data_128_0.png" />
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">background_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(28681.84,26026.204,1542.3115))&#39;</span>
@@ -917,7 +1094,17 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<img src="Figures/background%20graph.png"/><p>The background area was selected from the EPIC.fits file</p>
+<img src="Figures/background%20graph.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_132_0.png" src="_images/PN data_132_0.png" />
+</div>
+</div>
+<p>The background area was selected from the EPIC.fits file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(28681.84,26026.204,1542.3115))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
@@ -948,7 +1135,17 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<img src="Figures/background%20lightcurve.png"/></div>
+<img src="Figures/background%20lightcurve.png"/><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/background lightcurve.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_139_0.png" src="_images/PN data_139_0.png" />
+</div>
+</div>
+</div>
 <div class="tex2jax_ignore mathjax_ignore section" id="fitting-a-line-model-a-class-anchor-id-bck-light-a">
 <h1><span class="section-number">3. </span>10. Fitting a line model <a class="anchor" id="bck_light"></a><a class="headerlink" href="#fitting-a-line-model-a-class-anchor-id-bck-light-a" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html">https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html</a></p>
@@ -963,8 +1160,48 @@ par  comp</p>
 <p>5    1   diskline   Incl       deg      89.9989      +/-  74.7981</p>
 <p>6    1   diskline   norm                1.14908E-03  +/-  6.13893E-06</p>
 <p>A powerlaw + diskline was fitted</p>
-<img src="Figures/PN_powerlaw_diskline_params.png"><p>the data was then fitted with kerrdisk using these params and the standard values</p>
-<img src="Figures/PN_kerrdisk_v1.png"><img src="Figures/PN_powerlaw_kerrdisk_v1.png"><img src="Figures/PN_powerlaw_kerrdisk_v1_graph.png"></div>
+<img src="Figures/PN_powerlaw_diskline_params.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_powerlaw_diskline_params.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_146_0.png" src="_images/PN data_146_0.png" />
+</div>
+</div>
+<p>the data was then fitted with kerrdisk using these params and the standard values</p>
+<img src="Figures/PN_kerrdisk_v1.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_kerrdisk_v1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_150_0.png" src="_images/PN data_150_0.png" />
+</div>
+</div>
+<img src="Figures/PN_powerlaw_kerrdisk_v1.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_powerlaw_kerrdisk_v1.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_152_0.png" src="_images/PN data_152_0.png" />
+</div>
+</div>
+<img src="Figures/PN_powerlaw_kerrdisk_v1_graph.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;Figures/PN_powerlaw_kerrdisk_v1_graph.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/PN data_154_0.png" src="_images/PN data_154_0.png" />
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
