@@ -55,7 +55,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Analysing the MOS data" href="MOS%20data.html" />
+    <link rel="next" title="4. Analysing the MOS data" href="MOS%20data.html" />
     <link rel="prev" title="XMM Anlaysis Logbook" href="titlepage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -102,7 +102,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  A Sample Section
+  Analysis Notebooks
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -116,7 +116,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="MOS%20data.html">
-   3.
+   4.
    <strong>
     Analysing the MOS data
    </strong>
@@ -179,11 +179,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/J-A-Marshall/Black-Hole-Research-Project.git"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/J-A-Marshall/Black-Hole-Research-Project.git/issues/new?title=Issue%20on%20page%20%2FPN data.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/J-A-Marshall/XMM-Analysis-Logbook.git/issues/new?title=Issue%20on%20page%20%2FPN data.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -204,7 +204,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/J-A-Marshall/Black-Hole-Research-Project.git/main?urlpath=tree/PN data.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/J-A-Marshall/XMM-Analysis-Logbook.git/main?urlpath=tree/PN data.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -375,6 +375,13 @@
    </a>
   </a>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fitting-a-line-model-a-class-anchor-id-bck-light-a">
+   3. 10. Fitting a line model
+   <a class="anchor" id="bck_light">
+   </a>
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -525,8 +532,7 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_SOURCE_IMAGE.png" src="attachment:MCG-6-30-15_SOURCE_IMAGE.png" /></p>
-<p>The scale was set to <strong>log</strong> and the colour to <strong>heat</strong>.</p>
+<img src="Figures/MCG-6-30-15_Source_Image.png"/><p>The scale was set to <strong>log</strong> and the colour to <strong>heat</strong>.</p>
 </div>
 <div class="section" id="filtering-the-data-a-class-anchor-id-filter-a">
 <h2><span class="section-number">1.5. </span>4 Filtering the Data <a class="anchor" id="Filter"></a><a class="headerlink" href="#filtering-the-data-a-class-anchor-id-filter-a" title="Permalink to this headline">¶</a></h2>
@@ -557,8 +563,7 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_filtered_light_curve.png" src="attachment:MCG-6-30-15_filtered_light_curve.png" /></p>
-<p>There is a clear cutoff of data at the right side of the graph indicating that there was a flaring event that was filtered out. For brevity, a lightcurve using the unfiltered data will be created.</p>
+<img src="Figures/MCG-6-30-15_filtered_light_curve.png"/><p>There is a clear cutoff of data at the right side of the graph indicating that there was a flaring event that was filtered out. For brevity, a lightcurve using the unfiltered data will be created.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withrateset</span><span class="o">=</span><span class="n">yes</span> <span class="n">rateset</span><span class="o">=</span><span class="n">lightcurve_un</span><span class="o">-</span><span class="n">filtered</span><span class="o">.</span><span class="n">fits</span> <span class="n">maketimecolumn</span><span class="o">=</span><span class="n">yes</span> <span class="n">timecolumn</span><span class="o">=</span><span class="n">TIME</span> <span class="n">timebinsize</span><span class="o">=</span><span class="mi">100</span> <span class="n">makeratecolumn</span><span class="o">=</span><span class="n">yes</span>
@@ -573,8 +578,7 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_un-filtered_light_curve.png" src="attachment:MCG-6-30-15_un-filtered_light_curve.png" /></p>
-<p>There is clearly a strong flaring event that should be removed. The standard filtering also removed various other counts from the un-filtered data that can be seen by comparing the two graphs. It is clear that the filtered data set should be used from here on.</p>
+<img src="Figures/MCG-6-30-15_un-filtered_light_curve.png"/><p>There is clearly a strong flaring event that should be removed. The standard filtering also removed various other counts from the un-filtered data that can be seen by comparing the two graphs. It is clear that the filtered data set should be used from here on.</p>
 </div>
 <div class="section" id="deep-minimum-lightcurve-a-class-anchor-id-source-a">
 <h3><span class="section-number">1.5.3. </span>4.3 Deep Minimum Lightcurve <a class="anchor" id="source"></a><a class="headerlink" href="#deep-minimum-lightcurve-a-class-anchor-id-source-a" title="Permalink to this headline">¶</a></h3>
@@ -600,15 +604,13 @@ For analysis of different ODFs, a different odfid and destination path will need
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_deepmin_light_curve.png" src="attachment:MCG-6-30-15_deepmin_light_curve.png" /></p>
-</div>
+<img src="Figures/MCG-6-30-15_deepmin_light_curve.png"/></div>
 </div>
 <div class="section" id="source-detection-a-class-anchor-id-source-a">
 <h2><span class="section-number">1.6. </span>5. Source Detection <a class="anchor" id="source"></a><a class="headerlink" href="#source-detection-a-class-anchor-id-source-a" title="Permalink to this headline">¶</a></h2>
-<p>The image of the source was viewed again to determine where the source and background regions are. To do this it was viewed with ds9 and circles under the region tab were added to the image and altered in size until they matched these regions. The properties such as position and radius of these circles were set to physical units and recorded.</p>
-<p><img alt="MCG-6-30-15_image_with_regions.png" src="attachment:MCG-6-30-15_image_with_regions.png" /></p>
-<p><img alt="Background%20circle.png" src="attachment:Background%20circle.png" /><img alt="Source%20circle.png" src="attachment:Source%20circle.png" /></p>
-<p>The spectrum of the source and background regions was then determined using <code class="docutils literal notranslate"><span class="pre">spectrumset</span></code></p>
+<p>The image of the source was viewed again to determine where the source and background regions are. To do this it was viewed with ds9 and circles under the region tab were added to the image and altered in size until they matched these regions. The properties such as position and radius of these circles were set to physical units and recorded by using the regions “get information” option.</p>
+<img src="Figures/MCG-6-30-15_image_with_regions.png"/><img src="Figures/Background%20circle.png"/>
+<img src="Figures/Source%20circle.png"/><p>The spectrum of the source and background regions was then determined using <code class="docutils literal notranslate"><span class="pre">spectrumset</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">PNsource_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(26229.662,27962.992,565.3))&#39;</span>
@@ -649,8 +651,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_Pileup.png" src="attachment:MCG-6-30-15_Pileup.png" /></p>
-</div>
+<img src="Figures/MCG-6-30-15_Pileup.png"/></div>
 <div class="section" id="preparing-the-spectrum-a-class-anchor-id-specprepare-a">
 <h2><span class="section-number">1.8. </span>7. Preparing the Spectrum <a class="anchor" id="specprepare"></a><a class="headerlink" href="#preparing-the-spectrum-a-class-anchor-id-specprepare-a" title="Permalink to this headline">¶</a></h2>
 <p>The calibration files, arf and rmf were created and grouped together to make using xspec easier</p>
@@ -715,8 +716,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="MCG-60-30-15_RAW_DATA.png" src="attachment:MCG-60-30-15_RAW_DATA.png" /></p>
-<p>This is the filtered data from MCG-60-30-15. There seems to be a break in the data at around 2.2keV which is due to the gold coating on the mirrors creating an absorption edge. The arf and rmf should take this into account when fitting models to this data, however, the data below this will be ignored as it is not important to what we want to observe.</p>
+<img src="Figures/MCG-60-30-15_RAW_DATA.png"/><p>This is the filtered data from MCG-60-30-15. There seems to be a break in the data at around 2.2keV which is due to the gold coating on the mirrors creating an absorption edge. The arf and rmf should take this into account when fitting models to this data, however, the data below this will be ignored as it is not important to what we want to observe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">ignore</span> <span class="mf">0.0</span><span class="o">-</span><span class="mf">2.5</span>
@@ -731,8 +731,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="MCG-60-30-15_Restricted_data.png" src="attachment:MCG-60-30-15_Restricted_data.png" /></p>
-<p>This presents a much clearer view of the data and a slight hump at ~6keV can be seen. A simple power law model can now be fitted to the data to try and extract some information about the small hump.</p>
+<img src="Figures/MCG-60-30-15_Restricted_data.png"/><p>This presents a much clearer view of the data and a slight hump at ~6keV can be seen. A simple power law model can now be fitted to the data to try and extract some information about the small hump.</p>
 <div class="section" id="fitting-a-model-a-class-anchor-id-model-a">
 <h3><span class="section-number">1.9.1. </span>Fitting a model <a class="anchor" id="model"></a><a class="headerlink" href="#fitting-a-model-a-class-anchor-id-model-a" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
@@ -770,8 +769,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="MCG-60-30-15_q=3_Powerlaw.png" src="attachment:MCG-60-30-15_q=3_Powerlaw.png" /></p>
-<p>Here the iron emission line at 6.4keV can clearly be seen and is very strongly broadened to energies around ~5keV.</p>
+<img src="Figures/MCG-60-30-15_q=3_Powerlaw.png"/><p>Here the iron emission line at 6.4keV can clearly be seen and is very strongly broadened to energies around ~5keV.</p>
 </div>
 <div class="section" id="creating-the-unfolded-spectrum-a-class-anchor-id-unfolded-a">
 <h3><span class="section-number">1.9.2. </span>Creating the Unfolded Spectrum<a class="anchor" id="unfolded"></a><a class="headerlink" href="#creating-the-unfolded-spectrum-a-class-anchor-id-unfolded-a" title="Permalink to this headline">¶</a></h3>
@@ -812,8 +810,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_iron-line-removed.png" src="attachment:MCG-6-30-15_iron-line-removed.png" /></p>
-<div class="cell docutils container">
+<img src="Figures/MCG-6-30-15_iron-line-removed.png"/><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">model</span> <span class="n">powerlaw</span>
 </pre></div>
@@ -855,16 +852,14 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_fitted_model_iron_removed.png" src="attachment:MCG-6-30-15_fitted_model_iron_removed.png" /></p>
-<div class="cell docutils container">
+<img src="Figures/MCG-6-30-15_fitted_model_iron_removed.png"/><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">plot</span> <span class="n">eeufs</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_unfolded_spec_v1.png" src="attachment:MCG-6-30-15_unfolded_spec_v1.png" /></p>
-<p>The iron line can clearly be seen, however removing the continuum fit and rescaling the y axis needs to be done</p>
+<img src="Figures/MCG-6-30-15_unfolded_spec_v1.png"/><p>The iron line can clearly be seen, however removing the continuum fit and rescaling the y axis needs to be done</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">XSPEC12</span><span class="o">&gt;</span> <span class="n">iplot</span>
@@ -886,8 +881,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="MCG-6-30-15_unfolded_spec_v2.png" src="attachment:MCG-6-30-15_unfolded_spec_v2.png" /></p>
-<div class="cell docutils container">
+<img src="Figures/MCG-6-30-15_unfolded_spec_v2.png"/><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PLT</span><span class="o">&gt;</span>
 </pre></div>
@@ -908,8 +902,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 <h1><span class="section-number">2. </span>9. Background lightcurve <a class="anchor" id="bck_light"></a><a class="headerlink" href="#background-lightcurve-a-class-anchor-id-bck-light-a" title="Permalink to this headline">¶</a></h1>
 <p>A lightcurve is made to determine the prescence of any flaring events. A background region needs to be selected and a lightcurve plotted</p>
 <p>The image file was brought up with ds9 and a background region selected</p>
-<p><img alt="background%20circle%20lightcurve.png" src="attachment:background%20circle%20lightcurve.png" /></p>
-<p><img alt="background%20circle%20detail.png" src="attachment:background%20circle%20detail.png" /></p>
+<img src="Figures/background%20circle%20lightcurve.png"/><img src="Figures/background%20circle%20detail.png"/>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC_filt_time</span><span class="o">.</span><span class="n">fits</span> <span class="n">withspectrumset</span><span class="o">=</span><span class="n">yes</span> <span class="n">spectrumset</span><span class="o">=</span><span class="n">background_spectrum</span><span class="o">.</span><span class="n">fits</span> <span class="n">energycolumn</span><span class="o">=</span><span class="n">PI</span> <span class="n">spectralbinsize</span><span class="o">=</span><span class="mi">5</span> <span class="n">withspecranges</span><span class="o">=</span><span class="n">yes</span> <span class="n">specchannelmin</span><span class="o">=</span><span class="mi">0</span> <span class="n">specchannelmax</span><span class="o">=</span><span class="mi">20479</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;(FLAG==0) &amp;&amp; (PATTERN&lt;=4) &amp;&amp; ((X,Y) IN circle(28681.84,26026.204,1542.3115))&#39;</span>
@@ -924,8 +917,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="background%20graph.png" src="attachment:background%20graph.png" /></p>
-<p>The background area was selected from the EPIC.fits file</p>
+<img src="Figures/background%20graph.png"/><p>The background area was selected from the EPIC.fits file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">evselect</span> <span class="n">table</span><span class="o">=</span><span class="n">EPIC</span><span class="o">.</span><span class="n">fits</span> <span class="n">withfilteredset</span><span class="o">=</span><span class="n">yes</span> <span class="n">expression</span><span class="o">=</span><span class="s1">&#39;((X,Y) IN circle(28681.84,26026.204,1542.3115))&#39;</span> <span class="n">filteredset</span><span class="o">=</span><span class="n">background_spec</span><span class="o">.</span><span class="n">fits</span> <span class="n">filtertype</span><span class="o">=</span><span class="n">expression</span> <span class="n">keepfilteroutput</span><span class="o">=</span><span class="n">yes</span>
@@ -956,8 +948,23 @@ This can be solved by issuing the command <code class="docutils literal notransl
 </div>
 </div>
 </div>
-<p><img alt="background%20lightcurve.png" src="attachment:background%20lightcurve.png" /></p>
-</div>
+<img src="Figures/background%20lightcurve.png"/></div>
+<div class="tex2jax_ignore mathjax_ignore section" id="fitting-a-line-model-a-class-anchor-id-bck-light-a">
+<h1><span class="section-number">3. </span>10. Fitting a line model <a class="anchor" id="bck_light"></a><a class="headerlink" href="#fitting-a-line-model-a-class-anchor-id-bck-light-a" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html">https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/node11.html</a></p>
+<p>The model kerrdisk suggests using a model such as diskline or laor to determine the best fit parameters intially. The PN spectrum group file was fitted with the diskline model in xspec initially using <code class="docutils literal notranslate"><span class="pre">show</span></code> to reveal the parameter values.
+This produced the following:</p>
+<p>Model Model Component  Parameter  Unit     Value
+par  comp</p>
+<p>1    1   diskline   LineE      keV      5.94046      +/-  2.64172E-03</p>
+<p>2    1   diskline   Betor10             -2.00000     frozen</p>
+<p>3    1   diskline   Rin_M               10.0000      frozen</p>
+<p>4    1   diskline   Rout_M              1000.00      frozen</p>
+<p>5    1   diskline   Incl       deg      89.9989      +/-  74.7981</p>
+<p>6    1   diskline   norm                1.14908E-03  +/-  6.13893E-06</p>
+<p>A powerlaw + diskline was fitted</p>
+<img src="Figures/PN_powerlaw_diskline_params.png"><p>the data was then fitted with kerrdisk using these params and the standard values</p>
+<img src="Figures/PN_kerrdisk_v1.png"><img src="Figures/PN_powerlaw_kerrdisk_v1.png"><img src="Figures/PN_powerlaw_kerrdisk_v1_graph.png"></div>
 
     <script type="text/x-thebe-config">
     {
@@ -994,7 +1001,7 @@ This can be solved by issuing the command <code class="docutils literal notransl
     <a class='right-next' id="next-link" href="MOS%20data.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span><strong>Analysing the MOS data</strong></p>
+        <p class="prev-next-title"><span class="section-number">4. </span><strong>Analysing the MOS data</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
